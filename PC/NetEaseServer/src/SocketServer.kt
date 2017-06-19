@@ -43,7 +43,7 @@ fun musicControl(msg:String)
     val systemName=System.getProperty("os.name")
     println(systemName)
     if (systemName.equals(MAC)) {
-        println(System.`in`)
+
 //        val robot: Robot = Robot()
 //        robot.keyPress(KeyEvent.VK_ALT)
 //        robot.keyPress(KeyEvent.VK_SPACE)
