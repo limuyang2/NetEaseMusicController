@@ -14,6 +14,10 @@ import java.io.BufferedWriter
 val MAC="Mac OS X"
 val WIN="Windows"
 
+val PAUSE_PLAY = "PAUSE_PLAY"
+val LAST = "LAST"
+val NEXT = "NEXT"
+
 fun main(args: Array<String>) {
     println("hello kotlin")
     socketServer()
