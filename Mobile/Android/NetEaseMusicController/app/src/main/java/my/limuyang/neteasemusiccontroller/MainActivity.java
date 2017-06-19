@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     @interface ControlName{
         String PAUSE_PLAY="PAUSE_PLAY";
         String LAST="LAST";
+        String NEXT="NEXT";
     }
 
     @BindView(R.id.pause_play)
