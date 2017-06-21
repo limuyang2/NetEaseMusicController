@@ -3,7 +3,7 @@ package my.limuyang.neteasemusiccontroller.view;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -14,16 +14,23 @@ import my.limuyang.neteasemusiccontroller.contract.MainActivityContract;
 import my.limuyang.neteasemusiccontroller.presenter.MainActivityPresenter;
 
 import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.LAST;
+import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.NEXT;
 import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.PAUSE_PLAY;
 
 public class MainActivity extends AppCompatActivity implements MainActivityContract.View {
 
+    @BindView(R.id.last)
+    ImageView last;
+    @BindView(R.id.next)
+    ImageView next;
+    @BindView(R.id.pause_play)
+    ImageView pausePlay;
+    @BindView(R.id.addvol)
+    ImageView addvol;
+    @BindView(R.id.decvol)
+    ImageView decvol;
     private MainActivityContract.Presenter presenter;
 
-    @BindView(R.id.pause_play)
-    Button pausePlay;
-    @BindView(R.id.last)
-    Button last;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     }
 
 
-    @OnClick({R.id.pause_play, R.id.last})
+    @OnClick({R.id.pause_play, R.id.last,R.id.next,R.id.addvol,R.id.decvol})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.pause_play:
@@ -44,6 +51,10 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
             case R.id.last:
                 presenter.sendControlInfo(LAST);
                 break;
+            case R.id.next:
+                presenter.sendControlInfo(NEXT);
+                break;
+            case R.id.addvol:
         }
     }
 
@@ -52,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(MainActivity.this,msg,Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, msg, Toast.LENGTH_LONG).show();
             }
         });
     }

@@ -4,7 +4,10 @@ import android.support.annotation.StringDef;
 
 import java.lang.annotation.Documented;
 
+import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.ADDVOL;
+import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.DECVOL;
 import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.LAST;
+import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.NEXT;
 import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.PAUSE_PLAY;
 
 /**
@@ -12,12 +15,14 @@ import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.PAU
  */
 
 public class Constants {
-    @StringDef({PAUSE_PLAY, LAST})
+    @StringDef({PAUSE_PLAY, LAST,NEXT,ADDVOL,DECVOL})
     @Documented
     public @interface ControlName {
         String PAUSE_PLAY = "PAUSE_PLAY";
         String LAST = "LAST";
         String NEXT = "NEXT";
+        String ADDVOL = "ADDVOL";
+        String DECVOL = "DECVOL";
 
     }
 }

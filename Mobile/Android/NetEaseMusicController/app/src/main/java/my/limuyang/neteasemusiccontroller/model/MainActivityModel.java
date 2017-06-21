@@ -41,7 +41,7 @@ public class MainActivityModel implements MainActivityContract.Model {
                     bw.flush();
                     BufferedReader br = new BufferedReader(new InputStreamReader(getSocketInputStream()));
                     //读取服务器返回的消息数据
-                    System.out.println(">>" + br.readLine());
+//                    System.out.println(">>" + br.readLine());
                 } catch (SocketTimeoutException e)
                 {
                     presenter.showToastMsg("连接超时");
