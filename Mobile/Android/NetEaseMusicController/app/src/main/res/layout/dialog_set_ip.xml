@@ -7,7 +7,7 @@
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:textColor="@color/textColor"
-        android:gravity="center"
+
         android:id="@+id/ip_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
