@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.rengwuxian.materialedittext.MaterialEditText;
 
@@ -17,6 +18,7 @@ import my.limuyang.neteasemusiccontroller.utils.Constants;
 import my.limuyang.neteasemusiccontroller.utils.SharedPreferencesHelper;
 
 import static my.limuyang.neteasemusiccontroller.utils.Constants.MANUAL_IP;
+import static my.limuyang.neteasemusiccontroller.utils.Tools.matcherIP;
 
 /**
  * Created by limuyang on 2017/6/21.
@@ -92,8 +94,16 @@ public class SettingPreferenceFragment extends PreferenceFragment {
                     okButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            dialog.dismiss();
-                            sharedPreferencesHelper.put(MANUAL_IP, ipEditText.getText().toString());
+                            String getText=ipEditText.getText().toString();
+
+                            if (matcherIP(getText)){
+                                dialog.dismiss();
+                                manualIp.setSummary(getText);
+                                sharedPreferencesHelper.put(MANUAL_IP, ipEditText.getText().toString());
+                                Toast.makeText(getActivity(),"设置IP成功",Toast.LENGTH_LONG).show();
+                            }
+                            else
+                                ipEditText.setError("输入的ip不正确！");
                         }
                     });
 
