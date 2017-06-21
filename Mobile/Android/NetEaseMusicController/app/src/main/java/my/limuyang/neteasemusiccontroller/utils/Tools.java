@@ -42,7 +42,7 @@ public class Tools {
 
     /*
      * @ClassName：ScanDeviceTool
-     * @Description：TODO<局域网扫描设备工具类>
+     * @Description：局域网扫描设备工具类
      */
     private static class ScanDeviceTool {
 
@@ -66,7 +66,7 @@ public class Tools {
         private ThreadPoolExecutor mExecutor;// 线程池对象
 
         /**
-         * TODO<扫描局域网内ip，找到对应服务器>
+         * 扫描局域网内ip，找到对应服务器
          *
          * @return void
          */
@@ -149,7 +149,7 @@ public class Tools {
         }
 
         /**
-         * TODO<销毁正在执行的线程池>
+         * 销毁正在执行的线程池
          */
         public void destory() {
             if (mExecutor != null) {
@@ -158,7 +158,7 @@ public class Tools {
         }
 
         /**
-         * TODO<获取本地ip地址>
+         * 获取本地ip地址
          *
          * @return String
          */
@@ -226,7 +226,7 @@ public class Tools {
         }
 
         /**
-         * TODO<获取本机IP前缀>
+         * 获取本机IP前缀
          *
          * @param devAddress // 本机IP地址
          * @return String
