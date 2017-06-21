@@ -4,4 +4,10 @@
     <string name="setting">设置</string>
     <string name="IPAddress">IP 地址</string>
     <string name="help_text">例如：192.168.199.101</string>
+    <string name="scanning">扫描中...</string>
+    <string name="server_IP">服务器IP</string>
+    <string name="scan_erro">没有扫描到服务器，请重试！</string>
+    <string name="scan_ok">扫描成功</string>
+    <string name="setIp_success">设置IP成功！</string>
+    <string name="IP_format_incorrect">输入的IP格式不正确！</string>
 </resources>

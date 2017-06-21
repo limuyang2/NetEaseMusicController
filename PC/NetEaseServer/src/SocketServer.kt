@@ -11,8 +11,8 @@ import java.io.BufferedWriter
 /**
  * Created by limuyang on 2017/6/20.
  */
-val MAC="Mac OS X"
-val WIN="Windows"
+val MAC = "Mac OS X"
+val WIN = "Windows"
 
 val PAUSE_PLAY = "PAUSE_PLAY"
 val LAST = "LAST"
@@ -32,7 +32,8 @@ fun socketServer() {
         var br: BufferedReader = BufferedReader(InputStreamReader(socket.getInputStream()))
         var msg = br.readLine()
 //        println(msg)
-        musicControl(msg)
+        if (msg != null)
+            musicControl(msg)
 
 
         val bw = BufferedWriter(OutputStreamWriter(socket.getOutputStream()))
@@ -44,14 +45,12 @@ fun socketServer() {
     server.close()
 }
 
-fun musicControl(msg:String)
-{
-    val systemName=System.getProperty("os.name")
+fun musicControl(msg: String) {
+    val systemName = System.getProperty("os.name")
     println(systemName)
     if (systemName.equals(MAC)) {
 //        val robot: Robot = Robot()
-        if (msg.equals(PAUSE_PLAY))
-        {
+        if (msg.equals(PAUSE_PLAY)) {
             val robot: Robot = Robot()
             robot.keyPress(KeyEvent.VK_META)
             robot.keyPress(KeyEvent.VK_P)
@@ -59,8 +58,7 @@ fun musicControl(msg:String)
             robot.keyRelease(KeyEvent.VK_META)
             robot.keyRelease(KeyEvent.VK_P)
         }
-        if (msg.equals(LAST))
-        {
+        if (msg.equals(LAST)) {
             println(msg)
             val robot: Robot = Robot()
             robot.keyPress(KeyEvent.VK_CONTROL)
@@ -73,8 +71,7 @@ fun musicControl(msg:String)
         }
     }
 
-    if (WIN in systemName)
-    {
+    if (WIN in systemName) {
 
     }
 }

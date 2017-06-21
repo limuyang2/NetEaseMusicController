@@ -23,7 +23,7 @@ import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.DEC
 import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.LAST;
 import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.NEXT;
 import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.PAUSE_PLAY;
-import static my.limuyang.neteasemusiccontroller.utils.Constants.MANUAL_IP;
+import static my.limuyang.neteasemusiccontroller.utils.Constants.IP_ADDRESS;
 
 public class MainActivity extends AppCompatActivity implements MainActivityContract.View {
 
@@ -43,8 +43,9 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     @Override
     protected void onStart() {
         super.onStart();
+        //读取配置文件中的IP
         SharedPreferencesHelper sharedPreferencesHelper = new SharedPreferencesHelper(this);
-        Constants.IpAddress = sharedPreferencesHelper.get(MANUAL_IP, "1.1.1.1").toString();
+        Constants.IpAddress = sharedPreferencesHelper.get(IP_ADDRESS, "1.1.1.1").toString();
     }
 
     @Override

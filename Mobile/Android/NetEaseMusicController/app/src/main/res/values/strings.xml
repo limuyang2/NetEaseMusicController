@@ -3,5 +3,11 @@
     <string name="setting">setting</string>
     <string name="IPAddress">IP Address</string>
     <string name="help_text">such as:192.168.199.101</string>
+    <string name="scanning">Scanning...</string>
+    <string name="server_IP">Server IP</string>
+    <string name="scan_erro">No scan to the server</string>
+    <string name="scan_ok">Scan success</string>
+    <string name="setIp_success">Set IP success</string>
+    <string name="IP_format_incorrect">The input IP format is incorrect!</string>
 
 </resources>

@@ -35,4 +35,5 @@ dependencies {
 
 
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'com.github.ybq:Android-SpinKit:1.1.0'
 }
