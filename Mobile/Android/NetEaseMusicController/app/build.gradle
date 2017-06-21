@@ -33,8 +33,6 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 
-    compile 'com.leon:lsettingviewlibrary:1.2.0'
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.20'
-    compile 'com.yanyusong.y_divideritemdecoration:y_divideritemdecoration:2.0'
+
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
 }
