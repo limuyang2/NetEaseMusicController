@@ -6,12 +6,13 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 
+import static my.limuyang.neteasemusiccontroller.utils.Constants.IpAddress;
+
 /**
  * Created by limuyang on 2017/6/20.
  */
 
 public class SocketClient {
-    private static final String IpAddress = "192.168.191.1";
 
     private static Socket socket = new Socket();
 

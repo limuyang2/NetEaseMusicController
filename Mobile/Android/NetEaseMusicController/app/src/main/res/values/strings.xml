@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">NetEaseMusicController</string>
+    <string name="setting">setting</string>
+    <string name="IPAddress">IP Address</string>
+    <string name="help_text">such as:192.168.199.101</string>
+
 </resources>

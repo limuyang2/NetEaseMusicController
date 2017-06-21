@@ -1,11 +1,12 @@
 package my.limuyang.neteasemusiccontroller.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -15,29 +16,36 @@ import my.limuyang.neteasemusiccontroller.R;
 import my.limuyang.neteasemusiccontroller.contract.MainActivityContract;
 import my.limuyang.neteasemusiccontroller.presenter.MainActivityPresenter;
 import my.limuyang.neteasemusiccontroller.utils.Constants;
+import my.limuyang.neteasemusiccontroller.utils.SharedPreferencesHelper;
 
+import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.ADDVOL;
+import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.DECVOL;
 import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.LAST;
 import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.NEXT;
 import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.PAUSE_PLAY;
+import static my.limuyang.neteasemusiccontroller.utils.Constants.MANUAL_IP;
 
 public class MainActivity extends AppCompatActivity implements MainActivityContract.View {
 
     @BindView(R.id.last)
-    ImageView last;
+    ImageButton last;
     @BindView(R.id.next)
-    ImageView next;
+    ImageButton next;
     @BindView(R.id.pause_play)
-    ImageView pausePlay;
+    ImageButton pausePlay;
     @BindView(R.id.addvol)
-    ImageView addvol;
+    ImageButton addvol;
     @BindView(R.id.decvol)
-    ImageView decvol;
-    @BindView(R.id.ipaddressr)
-    EditText ipaddressr;
-    @BindView(R.id.getipbutton)
-    Button getipbutton;
+    ImageButton decvol;
+
     private MainActivityContract.Presenter presenter;
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        SharedPreferencesHelper sharedPreferencesHelper = new SharedPreferencesHelper(this);
+        Constants.IpAddress = sharedPreferencesHelper.get(MANUAL_IP, "1.1.1.1").toString();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +54,26 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         ButterKnife.bind(this);
 
         presenter = new MainActivityPresenter(this);
+
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.setting_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.setting:
+                Intent intent1 = new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(intent1);
+                break;
+            default:
+        }
+        return true;
+    }
 
     @OnClick({R.id.pause_play, R.id.last, R.id.next, R.id.addvol, R.id.decvol})
     public void onViewClicked(View view) {
@@ -62,10 +88,10 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
                 presenter.sendControlInfo(NEXT);
                 break;
             case R.id.addvol:
-                presenter.sendControlInfo(Constants.ControlName.ADDVOL);
+                presenter.sendControlInfo(ADDVOL);
                 break;
             case R.id.decvol:
-                presenter.sendControlInfo(Constants.ControlName.DECVOL);
+                presenter.sendControlInfo(DECVOL);
                 break;
         }
     }
@@ -80,8 +106,4 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         });
     }
 
-    @OnClick(R.id.getipbutton)
-    public void onClick() {
-        String Ipaddress = ipaddressr.getText().toString();
-    }
 }

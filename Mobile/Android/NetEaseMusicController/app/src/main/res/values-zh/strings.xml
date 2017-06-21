@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">网易云音乐控制</string>
+    <string name="setting">设置</string>
+    <string name="IPAddress">IP 地址</string>
+    <string name="help_text">例如：192.168.199.101</string>
+</resources>

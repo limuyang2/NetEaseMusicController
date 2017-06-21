@@ -5,7 +5,7 @@ android {
     buildToolsVersion "26.0.0"
     defaultConfig {
         applicationId "my.limuyang.neteasemusiccontroller"
-        minSdkVersion 15
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -25,9 +25,16 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:support-v4:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 
     compile 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+
+    compile 'com.leon:lsettingviewlibrary:1.2.0'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.20'
+    compile 'com.yanyusong.y_divideritemdecoration:y_divideritemdecoration:2.0'
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
 }

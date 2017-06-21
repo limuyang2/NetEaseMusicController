@@ -14,6 +14,7 @@ import my.limuyang.neteasemusiccontroller.contract.MainActivityContract;
 import my.limuyang.neteasemusiccontroller.utils.Constants;
 
 import static my.limuyang.neteasemusiccontroller.SocketClient.getSocketInputStream;
+import static my.limuyang.neteasemusiccontroller.utils.Constants.IpAddress;
 
 /**
  * Created by limuyang on 2017/6/20.
@@ -24,9 +25,8 @@ public class MainActivityModel implements MainActivityContract.Model {
     private ExecutorService singleThreadPool = Executors.newSingleThreadExecutor();
     private MainActivityContract.Presenter presenter;
 
-    public MainActivityModel(MainActivityContract.Presenter presenter)
-    {
-        this.presenter=presenter;
+    public MainActivityModel(MainActivityContract.Presenter presenter) {
+        this.presenter = presenter;
     }
 
     @Override
@@ -42,11 +42,9 @@ public class MainActivityModel implements MainActivityContract.Model {
                     BufferedReader br = new BufferedReader(new InputStreamReader(getSocketInputStream()));
                     //读取服务器返回的消息数据
 //                    System.out.println(">>" + br.readLine());
-                } catch (SocketTimeoutException e)
-                {
-                    presenter.showToastMsg("连接超时");
-                }
-                catch (IOException e) {
+                } catch (SocketTimeoutException e) {
+                    presenter.showToastMsg(IpAddress + "连接超时");
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }

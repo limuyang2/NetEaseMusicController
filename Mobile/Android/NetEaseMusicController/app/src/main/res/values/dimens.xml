@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="setting_item_height">45dp</dimen>
+    <dimen name="recyclerView_text">18sp</dimen>
+
+</resources>

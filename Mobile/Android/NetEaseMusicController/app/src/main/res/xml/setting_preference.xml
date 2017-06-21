@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory android:title="IP">
+
+        <SwitchPreference
+            android:persistent="true"
+            android:defaultValue="false"
+            android:key="auto_set_ip"
+            android:summary="服务器ip地址"
+            android:title="自动设置ip" />
+        <Preference
+            android:persistent="true"
+            android:key="manual_ip"
+            android:title="手动设置ip" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:textColor="@color/textColor"
+        android:gravity="center"
+        android:id="@+id/ip_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/IPAddress"
+        android:textSize="@dimen/recyclerView_text"
+        app:met_clearButton="true"
+        app:met_floatingLabel="normal"
+        app:met_helperText="@string/help_text"
+        app:met_hideUnderline="false"
+        app:met_singleLineEllipsis="true" />
+
+    <RelativeLayout
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@+id/frameLayout2"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:textColor="@color/jumbo"
+            android:text="返回"
+            android:id="@+id/backButton"
+            android:layout_toStartOf="@+id/okButton"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="确定"
+            android:id="@+id/okButton"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>
