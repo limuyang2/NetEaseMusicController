@@ -11,7 +11,7 @@ import java.net.Socket;
  */
 
 public class SocketClient {
-    private static final String IpAddress = "192.168.199.120";
+    private static final String IpAddress = "192.168.191.1";
 
     private static Socket socket = new Socket();
 

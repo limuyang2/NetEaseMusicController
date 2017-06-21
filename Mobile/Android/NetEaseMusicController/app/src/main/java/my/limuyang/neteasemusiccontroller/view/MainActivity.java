@@ -3,6 +3,8 @@ package my.limuyang.neteasemusiccontroller.view;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -12,6 +14,7 @@ import butterknife.OnClick;
 import my.limuyang.neteasemusiccontroller.R;
 import my.limuyang.neteasemusiccontroller.contract.MainActivityContract;
 import my.limuyang.neteasemusiccontroller.presenter.MainActivityPresenter;
+import my.limuyang.neteasemusiccontroller.utils.Constants;
 
 import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.LAST;
 import static my.limuyang.neteasemusiccontroller.utils.Constants.ControlName.NEXT;
@@ -29,6 +32,10 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     ImageView addvol;
     @BindView(R.id.decvol)
     ImageView decvol;
+    @BindView(R.id.ipaddressr)
+    EditText ipaddressr;
+    @BindView(R.id.getipbutton)
+    Button getipbutton;
     private MainActivityContract.Presenter presenter;
 
 
@@ -42,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     }
 
 
-    @OnClick({R.id.pause_play, R.id.last,R.id.next,R.id.addvol,R.id.decvol})
+    @OnClick({R.id.pause_play, R.id.last, R.id.next, R.id.addvol, R.id.decvol})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.pause_play:
@@ -55,6 +62,11 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
                 presenter.sendControlInfo(NEXT);
                 break;
             case R.id.addvol:
+                presenter.sendControlInfo(Constants.ControlName.ADDVOL);
+                break;
+            case R.id.decvol:
+                presenter.sendControlInfo(Constants.ControlName.DECVOL);
+                break;
         }
     }
 
@@ -66,5 +78,10 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
                 Toast.makeText(MainActivity.this, msg, Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    @OnClick(R.id.getipbutton)
+    public void onClick() {
+        String Ipaddress = ipaddressr.getText().toString();
     }
 }

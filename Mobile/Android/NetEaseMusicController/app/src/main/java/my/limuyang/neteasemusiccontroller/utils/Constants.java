@@ -23,6 +23,5 @@ public class Constants {
         String NEXT = "NEXT";
         String ADDVOL = "ADDVOL";
         String DECVOL = "DECVOL";
-
     }
 }
