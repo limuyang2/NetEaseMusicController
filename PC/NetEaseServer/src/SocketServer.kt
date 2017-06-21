@@ -31,7 +31,8 @@ fun socketServer() {
         var socket: Socket = server.accept()
         var br: BufferedReader = BufferedReader(InputStreamReader(socket.getInputStream()))
         var msg = br.readLine()
-        println(msg)
+//        println(msg)
+        musicControl(msg)
 
 
         val bw = BufferedWriter(OutputStreamWriter(socket.getOutputStream()))
@@ -40,6 +41,7 @@ fun socketServer() {
         bw.write(str)
         bw.flush()
     }
+    server.close()
 }
 
 fun musicControl(msg:String)
@@ -47,13 +49,33 @@ fun musicControl(msg:String)
     val systemName=System.getProperty("os.name")
     println(systemName)
     if (systemName.equals(MAC)) {
-        println(System.`in`)
 //        val robot: Robot = Robot()
-//        robot.keyPress(KeyEvent.VK_ALT)
-//        robot.keyPress(KeyEvent.VK_SPACE)
-//
-//        robot.keyRelease(KeyEvent.VK_ALT)
-//        robot.keyRelease(KeyEvent.VK_SPACE)
+        if (msg.equals(PAUSE_PLAY))
+        {
+            val robot: Robot = Robot()
+            robot.keyPress(KeyEvent.VK_META)
+            robot.keyPress(KeyEvent.VK_P)
+
+            robot.keyRelease(KeyEvent.VK_META)
+            robot.keyRelease(KeyEvent.VK_P)
+        }
+        if (msg.equals(LAST))
+        {
+            println(msg)
+            val robot: Robot = Robot()
+            robot.keyPress(KeyEvent.VK_CONTROL)
+            robot.keyPress(KeyEvent.VK_SHIFT)
+            robot.keyPress(KeyEvent.VK_L)
+
+            robot.keyRelease(KeyEvent.VK_CONTROL)
+            robot.keyRelease(KeyEvent.VK_SHIFT)
+            robot.keyRelease(KeyEvent.VK_L)
+        }
+    }
+
+    if (systemName.equals(WIN))
+    {
+
     }
 }
 
