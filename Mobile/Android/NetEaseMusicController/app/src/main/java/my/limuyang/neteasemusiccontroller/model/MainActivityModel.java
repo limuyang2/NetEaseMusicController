@@ -43,8 +43,9 @@ public class MainActivityModel implements MainActivityContract.Model {
                     //读取服务器返回的消息数据
 //                    System.out.println(">>" + br.readLine());
                 } catch (SocketTimeoutException e) {
-                    presenter.showToastMsg(IpAddress + "连接超时");
+                    presenter.showToastMsg(IpAddress + "连接超时...");
                 } catch (IOException e) {
+                    presenter.showToastMsg(IpAddress + "连接错误！");
                     e.printStackTrace();
                 }
             }
