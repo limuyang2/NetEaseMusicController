@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Qzg-9J-wn4">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--网易云音乐控制-->
+        <scene sceneID="XU1-Tc-Nxz">
+            <objects>
+                <viewController id="v10-2X-UDF" customClass="ViewController" customModule="NetEaseMusicController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6o2-PQ-x55"/>
+                        <viewControllerLayoutGuide type="bottom" id="emA-2H-Vho"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oge-VG-Gfa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8A-9f-B3U">
+                                <rect key="frame" x="303" y="318" width="46" height="99"/>
+                                <state key="normal" title="下一首"/>
+                                <connections>
+                                    <action selector="nextClick:" destination="v10-2X-UDF" eventType="touchUpInside" id="nVg-j5-zx4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8Y-9U-fYz">
+                                <rect key="frame" x="65" y="319" width="46" height="98"/>
+                                <state key="normal" title="上一首"/>
+                                <connections>
+                                    <action selector="lastClick:" destination="v10-2X-UDF" eventType="touchUpInside" id="yUe-QI-zTS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBf-eM-OXt">
+                                <rect key="frame" x="174" y="353" width="67" height="30"/>
+                                <state key="normal" title="播放/暂停"/>
+                                <connections>
+                                    <action selector="playClick:" destination="v10-2X-UDF" eventType="touchUpInside" id="tHI-gO-a0j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5V-eB-ANw">
+                                <rect key="frame" x="65" y="440" width="41" height="30"/>
+                                <state key="normal" title="音量+"/>
+                                <connections>
+                                    <action selector="volAddClick:" destination="v10-2X-UDF" eventType="touchUpInside" id="89b-fl-FxZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWQ-ff-Ofu">
+                                <rect key="frame" x="311" y="440" width="38" height="30"/>
+                                <state key="normal" title="音量-"/>
+                                <connections>
+                                    <action selector="volSubClick:" destination="v10-2X-UDF" eventType="touchUpInside" id="POg-V6-dY2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52157171920000001" green="0.917082909" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S5V-eB-ANw" firstAttribute="top" secondItem="x8Y-9U-fYz" secondAttribute="bottom" constant="23" id="1JD-2B-k41"/>
+                            <constraint firstItem="B8A-9f-B3U" firstAttribute="centerY" secondItem="Oge-VG-Gfa" secondAttribute="centerY" id="3qy-JP-Az1"/>
+                            <constraint firstItem="x8Y-9U-fYz" firstAttribute="centerY" secondItem="Oge-VG-Gfa" secondAttribute="centerY" id="4jW-mo-AKy"/>
+                            <constraint firstItem="MBf-eM-OXt" firstAttribute="centerX" secondItem="Oge-VG-Gfa" secondAttribute="centerX" id="A7e-hv-eZI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B8A-9f-B3U" secondAttribute="trailing" constant="43" id="FGz-ha-bZ5"/>
+                            <constraint firstItem="S5V-eB-ANw" firstAttribute="leading" secondItem="Oge-VG-Gfa" secondAttribute="leadingMargin" constant="45" id="FUy-Ny-o3A"/>
+                            <constraint firstItem="B8A-9f-B3U" firstAttribute="top" secondItem="6o2-PQ-x55" secondAttribute="bottom" constant="254" id="KGX-kv-heT"/>
+                            <constraint firstItem="x8Y-9U-fYz" firstAttribute="leading" secondItem="Oge-VG-Gfa" secondAttribute="leadingMargin" constant="42" id="Lzm-cb-30T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JWQ-ff-Ofu" secondAttribute="trailing" constant="45" id="Roa-MY-EE0"/>
+                            <constraint firstItem="x8Y-9U-fYz" firstAttribute="leading" secondItem="Oge-VG-Gfa" secondAttribute="leadingMargin" constant="45" id="XMe-uA-j6c"/>
+                            <constraint firstItem="emA-2H-Vho" firstAttribute="top" secondItem="B8A-9f-B3U" secondAttribute="bottom" constant="319" id="dLC-zu-bt6"/>
+                            <constraint firstItem="emA-2H-Vho" firstAttribute="top" secondItem="x8Y-9U-fYz" secondAttribute="bottom" constant="319" id="e5J-Ax-nPE"/>
+                            <constraint firstItem="JWQ-ff-Ofu" firstAttribute="top" secondItem="B8A-9f-B3U" secondAttribute="bottom" constant="23" id="jjD-cf-Jnx"/>
+                            <constraint firstItem="MBf-eM-OXt" firstAttribute="centerY" secondItem="Oge-VG-Gfa" secondAttribute="centerY" id="lCS-fA-3KQ"/>
+                            <constraint firstItem="MBf-eM-OXt" firstAttribute="centerX" secondItem="Oge-VG-Gfa" secondAttribute="centerX" id="ull-bR-N9z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B8A-9f-B3U" secondAttribute="trailing" constant="45" id="yCv-Tb-8l0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="网易云音乐控制" id="e5R-n3-zjd">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="9qW-fh-pAV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SMx-dd-pkz">
+                                <rect key="frame" x="303" y="7" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="BEg-Oh-Qya"/>
+                                </constraints>
+                                <state key="normal" title="设置">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3mY-Ln-ita" kind="show" identifier="" id="tEh-uS-SNn"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gD-vM-y0t" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="337"/>
+        </scene>
+        <!--Setting Controller-->
+        <scene sceneID="ZvN-ah-4b4">
+            <objects>
+                <tableViewController id="3mY-Ln-ita" customClass="SettingController" customModule="NetEaseMusicController" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" delaysContentTouches="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dI8-70-S6e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="服务器IP" id="h6x-9h-Z3L">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="cvQ-yb-QrQ">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cvQ-yb-QrQ" id="6ot-IC-ZJ0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="自动获取IP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrM-aC-OGE">
+                                                    <rect key="frame" x="8" y="12" width="84" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Myk-g3-CC0">
+                                                    <rect key="frame" x="357" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="autoIpSwitchChange:" destination="3mY-Ln-ita" eventType="valueChanged" id="iZf-77-TBL"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeW-W8-UtG">
+                                                    <rect key="frame" x="349" y="12" width="0.0" height="21.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Myk-g3-CC0" firstAttribute="top" secondItem="6ot-IC-ZJ0" secondAttribute="top" constant="6" id="5xr-mM-4k2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="PeW-W8-UtG" secondAttribute="bottom" constant="2.5" id="LZv-UN-mfQ"/>
+                                                <constraint firstItem="PeW-W8-UtG" firstAttribute="top" secondItem="6ot-IC-ZJ0" secondAttribute="topMargin" constant="4" id="NzL-Oj-CAh"/>
+                                                <constraint firstAttribute="trailing" secondItem="Myk-g3-CC0" secondAttribute="trailing" constant="8" id="TJr-re-A0j"/>
+                                                <constraint firstItem="Myk-g3-CC0" firstAttribute="leading" secondItem="PeW-W8-UtG" secondAttribute="trailing" constant="8" id="qPW-h9-uE9"/>
+                                                <constraint firstAttribute="bottom" secondItem="Myk-g3-CC0" secondAttribute="bottom" constant="6.5" id="xJx-i4-ZZv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="veG-K8-Ovj">
+                                        <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="veG-K8-Ovj" id="ZZC-YA-Qle">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="手动输入IP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhE-RV-Mr4">
+                                                    <rect key="frame" x="8" y="11" width="84" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h36-kG-dJ6">
+                                                    <rect key="frame" x="100" y="6" width="130" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbK-l7-N3I">
+                                                    <rect key="frame" x="375" y="7" width="31" height="30"/>
+                                                    <state key="normal" title="确认"/>
+                                                    <connections>
+                                                        <action selector="setManualIp:" destination="3mY-Ln-ita" eventType="touchUpInside" id="HUl-nE-BZG"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="lbK-l7-N3I" secondAttribute="bottom" constant="6.5" id="HW1-P2-m78"/>
+                                                <constraint firstAttribute="trailing" secondItem="lbK-l7-N3I" secondAttribute="trailing" constant="8" id="Lbr-SU-8Fo"/>
+                                                <constraint firstItem="lbK-l7-N3I" firstAttribute="top" secondItem="ZZC-YA-Qle" secondAttribute="top" constant="7" id="eQZ-37-nwy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="3mY-Ln-ita" id="ydv-HC-xtZ"/>
+                            <outlet property="delegate" destination="3mY-Ln-ita" id="6od-mw-h6s"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="autoIpSwitch" destination="Myk-g3-CC0" id="lOU-Ft-OXn"/>
+                        <outlet property="autoIpSwitchCell" destination="cvQ-yb-QrQ" id="oeH-d2-RCA"/>
+                        <outlet property="ipInput" destination="h36-kG-dJ6" id="uwo-YE-0rF"/>
+                        <outlet property="lodingText" destination="PeW-W8-UtG" id="Qtu-AB-ObO"/>
+                        <outlet property="manualIpCell" destination="veG-K8-Ovj" id="3Ko-66-4GL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAM-r1-JZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sZm-9W-KYE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qzg-9J-wn4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kK4-eQ-1c2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="v10-2X-UDF" kind="relationship" relationship="rootViewController" id="oZC-dQ-AzR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zye-B5-qmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-942" y="339"/>
+        </scene>
+    </scenes>
+</document>

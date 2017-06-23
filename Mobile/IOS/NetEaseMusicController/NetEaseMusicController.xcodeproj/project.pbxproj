@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C207807B1EFBA5AB00B9711A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207807A1EFBA5AB00B9711A /* AppDelegate.swift */; };
+		C207807D1EFBA5AB00B9711A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207807C1EFBA5AB00B9711A /* ViewController.swift */; };
+		C20780801EFBA5AB00B9711A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C207807E1EFBA5AB00B9711A /* Main.storyboard */; };
+		C20780821EFBA5AB00B9711A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20780811EFBA5AB00B9711A /* Assets.xcassets */; };
+		C20780851EFBA5AB00B9711A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20780831EFBA5AB00B9711A /* LaunchScreen.storyboard */; };
+		C20780901EFBA5AB00B9711A /* NetEaseMusicControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207808F1EFBA5AB00B9711A /* NetEaseMusicControllerTests.swift */; };
+		C207809B1EFBA5AB00B9711A /* NetEaseMusicControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207809A1EFBA5AB00B9711A /* NetEaseMusicControllerUITests.swift */; };
+		C20780A91EFBA72700B9711A /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20780A81EFBA72700B9711A /* SettingController.swift */; };
+		C20780AF1EFBB6FC00B9711A /* TcpSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20780AE1EFBB6FC00B9711A /* TcpSocketClient.swift */; };
+		C23CB2BE1EFD0F4600C5C404 /* SwiftSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23CB2B71EFD0EFE00C5C404 /* SwiftSocket.framework */; };
+		C23CB2BF1EFD0F4600C5C404 /* SwiftSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C23CB2B71EFD0EFE00C5C404 /* SwiftSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C24373E41EFC34C3005DD26B /* SecondeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24373E31EFC34C3005DD26B /* SecondeController.swift */; };
+		C24373E61EFC4CD3005DD26B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24373E51EFC4CD3005DD26B /* Constants.swift */; };
+		C24373E81EFC6206005DD26B /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24373E71EFC6206005DD26B /* Tools.swift */; };
+		C2E4543E1EFC17C300B68EA4 /* ConfigureTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E4543D1EFC17C300B68EA4 /* ConfigureTools.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C207808C1EFBA5AB00B9711A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C207806F1EFBA5AB00B9711A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C20780761EFBA5AB00B9711A;
+			remoteInfo = NetEaseMusicController;
+		};
+		C20780971EFBA5AB00B9711A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C207806F1EFBA5AB00B9711A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C20780761EFBA5AB00B9711A;
+			remoteInfo = NetEaseMusicController;
+		};
+		C23CB2B61EFD0EFE00C5C404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C23CB2AF1EFD0EFE00C5C404 /* SwiftSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 377DAA691DCDE40200009697;
+			remoteInfo = "SwiftSocket iOS";
+		};
+		C23CB2B81EFD0EFE00C5C404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C23CB2AF1EFD0EFE00C5C404 /* SwiftSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 377DAA761DCDE45D00009697;
+			remoteInfo = "SwiftSocket macOS";
+		};
+		C23CB2BA1EFD0EFE00C5C404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C23CB2AF1EFD0EFE00C5C404 /* SwiftSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 37454ECA1E06158200800AE5;
+			remoteInfo = "SwiftSocket tvOS";
+		};
+		C23CB2BC1EFD0EFE00C5C404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C23CB2AF1EFD0EFE00C5C404 /* SwiftSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 375C482D1DDC4C56008C701D;
+			remoteInfo = "iOS Example";
+		};
+		C23CB2C01EFD0F4600C5C404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C23CB2AF1EFD0EFE00C5C404 /* SwiftSocket.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 377DAA681DCDE40200009697;
+			remoteInfo = "SwiftSocket iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C23CB2C21EFD0F4600C5C404 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C23CB2BF1EFD0F4600C5C404 /* SwiftSocket.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C20780771EFBA5AB00B9711A /* NetEaseMusicController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEaseMusicController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C207807A1EFBA5AB00B9711A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C207807C1EFBA5AB00B9711A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C207807F1EFBA5AB00B9711A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C20780811EFBA5AB00B9711A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C20780841EFBA5AB00B9711A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C20780861EFBA5AB00B9711A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C207808B1EFBA5AB00B9711A /* NetEaseMusicControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetEaseMusicControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C207808F1EFBA5AB00B9711A /* NetEaseMusicControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetEaseMusicControllerTests.swift; sourceTree = "<group>"; };
+		C20780911EFBA5AB00B9711A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C20780961EFBA5AB00B9711A /* NetEaseMusicControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetEaseMusicControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C207809A1EFBA5AB00B9711A /* NetEaseMusicControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetEaseMusicControllerUITests.swift; sourceTree = "<group>"; };
+		C207809C1EFBA5AB00B9711A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C20780A81EFBA72700B9711A /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		C20780AE1EFBB6FC00B9711A /* TcpSocketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TcpSocketClient.swift; sourceTree = "<group>"; };
+		C23CB2AF1EFD0EFE00C5C404 /* SwiftSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftSocket.xcodeproj; path = "SwiftSocket-master/SwiftSocket.xcodeproj"; sourceTree = "<group>"; };
+		C24373E31EFC34C3005DD26B /* SecondeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondeController.swift; sourceTree = "<group>"; };
+		C24373E51EFC4CD3005DD26B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C24373E71EFC6206005DD26B /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		C2E4543D1EFC17C300B68EA4 /* ConfigureTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureTools.swift; sourceTree = "<group>"; };
+		C2EF80151EFD455B0017E04D /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C20780741EFBA5AB00B9711A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23CB2BE1EFD0F4600C5C404 /* SwiftSocket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20780881EFBA5AB00B9711A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20780931EFBA5AB00B9711A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C207806E1EFBA5AB00B9711A = {
+			isa = PBXGroup;
+			children = (
+				C23CB2AF1EFD0EFE00C5C404 /* SwiftSocket.xcodeproj */,
+				C20780791EFBA5AB00B9711A /* NetEaseMusicController */,
+				C207808E1EFBA5AB00B9711A /* NetEaseMusicControllerTests */,
+				C20780991EFBA5AB00B9711A /* NetEaseMusicControllerUITests */,
+				C20780781EFBA5AB00B9711A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C20780781EFBA5AB00B9711A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C20780771EFBA5AB00B9711A /* NetEaseMusicController.app */,
+				C207808B1EFBA5AB00B9711A /* NetEaseMusicControllerTests.xctest */,
+				C20780961EFBA5AB00B9711A /* NetEaseMusicControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C20780791EFBA5AB00B9711A /* NetEaseMusicController */ = {
+			isa = PBXGroup;
+			children = (
+				C207807A1EFBA5AB00B9711A /* AppDelegate.swift */,
+				C207807C1EFBA5AB00B9711A /* ViewController.swift */,
+				C207807E1EFBA5AB00B9711A /* Main.storyboard */,
+				C20780811EFBA5AB00B9711A /* Assets.xcassets */,
+				C20780831EFBA5AB00B9711A /* LaunchScreen.storyboard */,
+				C20780861EFBA5AB00B9711A /* Info.plist */,
+				C20780A81EFBA72700B9711A /* SettingController.swift */,
+				C20780AE1EFBB6FC00B9711A /* TcpSocketClient.swift */,
+				C2E4543D1EFC17C300B68EA4 /* ConfigureTools.swift */,
+				C24373E31EFC34C3005DD26B /* SecondeController.swift */,
+				C24373E51EFC4CD3005DD26B /* Constants.swift */,
+				C24373E71EFC6206005DD26B /* Tools.swift */,
+				C2EF80151EFD455B0017E04D /* BridgingHeader.h */,
+			);
+			path = NetEaseMusicController;
+			sourceTree = "<group>";
+		};
+		C207808E1EFBA5AB00B9711A /* NetEaseMusicControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C207808F1EFBA5AB00B9711A /* NetEaseMusicControllerTests.swift */,
+				C20780911EFBA5AB00B9711A /* Info.plist */,
+			);
+			path = NetEaseMusicControllerTests;
+			sourceTree = "<group>";
+		};
+		C20780991EFBA5AB00B9711A /* NetEaseMusicControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C207809A1EFBA5AB00B9711A /* NetEaseMusicControllerUITests.swift */,
+				C207809C1EFBA5AB00B9711A /* Info.plist */,
+			);
+			path = NetEaseMusicControllerUITests;
+			sourceTree = "<group>";
+		};
+		C23CB2B01EFD0EFE00C5C404 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C23CB2B71EFD0EFE00C5C404 /* SwiftSocket.framework */,
+				C23CB2B91EFD0EFE00C5C404 /* SwiftSocket.framework */,
+				C23CB2BB1EFD0EFE00C5C404 /* SwiftSocket.framework */,
+				C23CB2BD1EFD0EFE00C5C404 /* iOS Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C20780761EFBA5AB00B9711A /* NetEaseMusicController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C207809F1EFBA5AB00B9711A /* Build configuration list for PBXNativeTarget "NetEaseMusicController" */;
+			buildPhases = (
+				C20780731EFBA5AB00B9711A /* Sources */,
+				C20780741EFBA5AB00B9711A /* Frameworks */,
+				C20780751EFBA5AB00B9711A /* Resources */,
+				C23CB2C21EFD0F4600C5C404 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C23CB2C11EFD0F4600C5C404 /* PBXTargetDependency */,
+			);
+			name = NetEaseMusicController;
+			productName = NetEaseMusicController;
+			productReference = C20780771EFBA5AB00B9711A /* NetEaseMusicController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C207808A1EFBA5AB00B9711A /* NetEaseMusicControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C20780A21EFBA5AB00B9711A /* Build configuration list for PBXNativeTarget "NetEaseMusicControllerTests" */;
+			buildPhases = (
+				C20780871EFBA5AB00B9711A /* Sources */,
+				C20780881EFBA5AB00B9711A /* Frameworks */,
+				C20780891EFBA5AB00B9711A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C207808D1EFBA5AB00B9711A /* PBXTargetDependency */,
+			);
+			name = NetEaseMusicControllerTests;
+			productName = NetEaseMusicControllerTests;
+			productReference = C207808B1EFBA5AB00B9711A /* NetEaseMusicControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C20780951EFBA5AB00B9711A /* NetEaseMusicControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C20780A51EFBA5AB00B9711A /* Build configuration list for PBXNativeTarget "NetEaseMusicControllerUITests" */;
+			buildPhases = (
+				C20780921EFBA5AB00B9711A /* Sources */,
+				C20780931EFBA5AB00B9711A /* Frameworks */,
+				C20780941EFBA5AB00B9711A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C20780981EFBA5AB00B9711A /* PBXTargetDependency */,
+			);
+			name = NetEaseMusicControllerUITests;
+			productName = NetEaseMusicControllerUITests;
+			productReference = C20780961EFBA5AB00B9711A /* NetEaseMusicControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C207806F1EFBA5AB00B9711A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "李沐阳";
+				TargetAttributes = {
+					C20780761EFBA5AB00B9711A = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = WY535LH57L;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					C207808A1EFBA5AB00B9711A = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = WY535LH57L;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C20780761EFBA5AB00B9711A;
+					};
+					C20780951EFBA5AB00B9711A = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = WY535LH57L;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C20780761EFBA5AB00B9711A;
+					};
+				};
+			};
+			buildConfigurationList = C20780721EFBA5AB00B9711A /* Build configuration list for PBXProject "NetEaseMusicController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C207806E1EFBA5AB00B9711A;
+			productRefGroup = C20780781EFBA5AB00B9711A /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C23CB2B01EFD0EFE00C5C404 /* Products */;
+					ProjectRef = C23CB2AF1EFD0EFE00C5C404 /* SwiftSocket.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C20780761EFBA5AB00B9711A /* NetEaseMusicController */,
+				C207808A1EFBA5AB00B9711A /* NetEaseMusicControllerTests */,
+				C20780951EFBA5AB00B9711A /* NetEaseMusicControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C23CB2B71EFD0EFE00C5C404 /* SwiftSocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftSocket.framework;
+			remoteRef = C23CB2B61EFD0EFE00C5C404 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C23CB2B91EFD0EFE00C5C404 /* SwiftSocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftSocket.framework;
+			remoteRef = C23CB2B81EFD0EFE00C5C404 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C23CB2BB1EFD0EFE00C5C404 /* SwiftSocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftSocket.framework;
+			remoteRef = C23CB2BA1EFD0EFE00C5C404 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C23CB2BD1EFD0EFE00C5C404 /* iOS Example.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "iOS Example.app";
+			remoteRef = C23CB2BC1EFD0EFE00C5C404 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C20780751EFBA5AB00B9711A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C20780851EFBA5AB00B9711A /* LaunchScreen.storyboard in Resources */,
+				C20780821EFBA5AB00B9711A /* Assets.xcassets in Resources */,
+				C20780801EFBA5AB00B9711A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20780891EFBA5AB00B9711A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20780941EFBA5AB00B9711A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C20780731EFBA5AB00B9711A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2E4543E1EFC17C300B68EA4 /* ConfigureTools.swift in Sources */,
+				C20780AF1EFBB6FC00B9711A /* TcpSocketClient.swift in Sources */,
+				C20780A91EFBA72700B9711A /* SettingController.swift in Sources */,
+				C207807D1EFBA5AB00B9711A /* ViewController.swift in Sources */,
+				C24373E41EFC34C3005DD26B /* SecondeController.swift in Sources */,
+				C24373E81EFC6206005DD26B /* Tools.swift in Sources */,
+				C207807B1EFBA5AB00B9711A /* AppDelegate.swift in Sources */,
+				C24373E61EFC4CD3005DD26B /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20780871EFBA5AB00B9711A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C20780901EFBA5AB00B9711A /* NetEaseMusicControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20780921EFBA5AB00B9711A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C207809B1EFBA5AB00B9711A /* NetEaseMusicControllerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C207808D1EFBA5AB00B9711A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C20780761EFBA5AB00B9711A /* NetEaseMusicController */;
+			targetProxy = C207808C1EFBA5AB00B9711A /* PBXContainerItemProxy */;
+		};
+		C20780981EFBA5AB00B9711A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C20780761EFBA5AB00B9711A /* NetEaseMusicController */;
+			targetProxy = C20780971EFBA5AB00B9711A /* PBXContainerItemProxy */;
+		};
+		C23CB2C11EFD0F4600C5C404 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftSocket iOS";
+			targetProxy = C23CB2C01EFD0F4600C5C404 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C207807E1EFBA5AB00B9711A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C207807F1EFBA5AB00B9711A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C20780831EFBA5AB00B9711A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C20780841EFBA5AB00B9711A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C207809D1EFBA5AB00B9711A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C207809E1EFBA5AB00B9711A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C20780A01EFBA5AB00B9711A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = WY535LH57L;
+				INFOPLIST_FILE = NetEaseMusicController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = limuyang.NetEaseMusicController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SWIFT_MODULE_NAME)/BridgingHeader.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C20780A11EFBA5AB00B9711A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = WY535LH57L;
+				INFOPLIST_FILE = NetEaseMusicController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = limuyang.NetEaseMusicController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SWIFT_MODULE_NAME)/BridgingHeader.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C20780A31EFBA5AB00B9711A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = WY535LH57L;
+				INFOPLIST_FILE = NetEaseMusicControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = limuyang.NetEaseMusicControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetEaseMusicController.app/NetEaseMusicController";
+			};
+			name = Debug;
+		};
+		C20780A41EFBA5AB00B9711A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = WY535LH57L;
+				INFOPLIST_FILE = NetEaseMusicControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = limuyang.NetEaseMusicControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetEaseMusicController.app/NetEaseMusicController";
+			};
+			name = Release;
+		};
+		C20780A61EFBA5AB00B9711A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = WY535LH57L;
+				INFOPLIST_FILE = NetEaseMusicControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = limuyang.NetEaseMusicControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = NetEaseMusicController;
+			};
+			name = Debug;
+		};
+		C20780A71EFBA5AB00B9711A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = WY535LH57L;
+				INFOPLIST_FILE = NetEaseMusicControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = limuyang.NetEaseMusicControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = NetEaseMusicController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C20780721EFBA5AB00B9711A /* Build configuration list for PBXProject "NetEaseMusicController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C207809D1EFBA5AB00B9711A /* Debug */,
+				C207809E1EFBA5AB00B9711A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C207809F1EFBA5AB00B9711A /* Build configuration list for PBXNativeTarget "NetEaseMusicController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C20780A01EFBA5AB00B9711A /* Debug */,
+				C20780A11EFBA5AB00B9711A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C20780A21EFBA5AB00B9711A /* Build configuration list for PBXNativeTarget "NetEaseMusicControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C20780A31EFBA5AB00B9711A /* Debug */,
+				C20780A41EFBA5AB00B9711A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C20780A51EFBA5AB00B9711A /* Build configuration list for PBXNativeTarget "NetEaseMusicControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C20780A61EFBA5AB00B9711A /* Debug */,
+				C20780A71EFBA5AB00B9711A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C207806F1EFBA5AB00B9711A /* Project object */;
+}
