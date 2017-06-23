@@ -31,7 +31,7 @@ fun socketServer() {
         var socket: Socket = server.accept()
         var br: BufferedReader = BufferedReader(InputStreamReader(socket.getInputStream()))
         var msg = br.readLine()
-//        println(msg)
+        println(msg)
         if (msg != null)
             musicControl(msg)
 
