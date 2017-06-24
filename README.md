@@ -5,16 +5,19 @@
 
 ## 移动端
 ### Android
-	采用java Socket实现。
+采用java Socket实现。
+	
 	编写环境：Android studio 2.3.3
 
 ### IOS
-	采用swift语言，使用[SwiftSocket](https://github.com/swiftsocket/SwiftSocket)开源库实现socket连接。
+采用swift语言，使用[SwiftSocket](https://github.com/swiftsocket/SwiftSocket)开源库实现socket连接。
+
 	编写环境：Xcode 8.3.3
 	Swift 版本：3.1
 
 ## PC端
-	采用java Socket实现服务端
-	如需修改快捷键，请自行修改对应源码
+采用java Socket实现服务端
+如需修改快捷键，请自行修改对应源码
+	
 	编写环境：Idea 2017
 	语言：kotlin
