@@ -16,7 +16,7 @@
 	Swift 版本：3.1
 
 ## PC端
-采用java Socket实现服务端
+采用java Socket实现服务端。
 如需修改快捷键，请自行修改对应源码
 	
 	编写环境：Idea 2017
