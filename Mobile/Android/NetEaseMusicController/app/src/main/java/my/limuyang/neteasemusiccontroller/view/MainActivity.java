@@ -1,6 +1,8 @@
 package my.limuyang.neteasemusiccontroller.view;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -55,7 +57,9 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         ButterKnife.bind(this);
 
         presenter = new MainActivityPresenter(this);
+        SharedPreferences sharedPreferences = getSharedPreferences("preferences", Context.MODE_PRIVATE);
 
+        System.out.println("IP_ADDRESS = "+sharedPreferences.getString(IP_ADDRESS, "no have"));
     }
 
     @Override
